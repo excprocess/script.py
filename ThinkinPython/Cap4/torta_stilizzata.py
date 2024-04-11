@@ -1,14 +1,17 @@
 import turtle
 bob = turtle.Turtle()
 
-def torta(t, length, n):
-    angle = 360/n
-    for i in range(n):
-        t.fd(length)
-        t.lt(angle)
+def isosceles(t, leg, base_angle, base):
+    """
+    Questa funzione disegna un triangolo isoscele a patto che i parametri inseriti
+    
+    """
 
-torta(bob, 30, 10)
+    t.fd(leg)
+    t.lt(180 + base_angle)
+    t.fd(base)
+    t.lt(180 + base_angle)
+    t.fd(leg)
 
-turtle.mainloop()
 
 
